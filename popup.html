@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Proof2Buss Clipper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>Proof2Buss Clipper</h1>
+  <button id="convert">Convert clipboard</button>
+  <label class="option">
+    <input id="wrap" type="checkbox" checked>
+    wrap with \begin{prooftree} ... \end{prooftree}
+  </label>
+  <label class="option">
+    <input id="math" type="checkbox" checked>
+    wrap with \[
+    ...
+    \]
+  </label>
+  <pre id="status">Copy a proof.sty expression, then click Convert clipboard.</pre>
+  <script src="converter.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
