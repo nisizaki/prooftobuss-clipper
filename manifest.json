@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Proof2Buss Clipper",
+  "version": "0.1.0",
+  "description": "Convert proof.sty \\infer notation in the clipboard into bussproofs LaTeX notation.",
+  "permissions": ["clipboardRead", "clipboardWrite"],
+  "action": {
+    "default_title": "Proof2Buss Clipper",
+    "default_popup": "popup.html"
+  }
+}
