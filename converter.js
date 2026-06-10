@@ -2,6 +2,7 @@
  * Proof2Buss Clipper
  * Converts a practical subset of proof.sty notation:
  *   \infer[Rule]{Conclusion}{Premise1 & Premise2}
+ * The optional label in \infer[Label] is treated as math content.
  *   \infer*{Conclusion}{Premise}
  *   \infer*[Rule]{Conclusion}{Premise1 & Premise2}
  * Nested \infer and \infer* expressions are supported.
@@ -216,7 +217,7 @@
   function renderInfer(node, lines) {
     for (const premise of node.premises) renderBuss(premise, lines);
 
-    if (node.label) lines.push(`\\RightLabel{${node.label}}`);
+    if (node.label) lines.push(`\\RightLabel{$${node.label}$}`);
     if (node.starred) lines.push("\\dottedLine");
 
     const n = node.premises.length;
